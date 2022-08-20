@@ -57,6 +57,20 @@ public class PublicApiController {
 				}
 			});
 		}
+		
+		
+		/*
+		 *convert user data to message format and then send to topic
+		 * public void sendMessage(User data){
+        LOGGER.info(String.format("Message sent -> %s", data.toString()));
+
+        Message<User> message = MessageBuilder
+                .withPayload(data)
+                .setHeader(KafkaHeaders.TOPIC, AppConstants.TOPIC_NAME)
+                .build();
+
+        kafkaTemplate.send(message);
+		 */
 		return aps.getApiDetails();
 	}
 
